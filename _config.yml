@@ -1,15 +1,15 @@
 
 # Site Settings
 
-title: Sujay Kundu  # Your Title 
-subtitle: Full Stack Web Developer 
-email: sujaykundu777@gmail.com  # Your Email
+title: Hongyu He  # Your Title 
+subtitle: Electrical Engineering, Xi'an Jiaotong University 
+email: nostalgia1229@gmail.com  # Your Email
 description: >-  
-  Sujay Kundu is Web Developer and Blogger
+  Hongyu He is an undergraduate student majoring in Electrical Engineering.
 baseurl: "/devlopr-starter" # the subpath of your site, e.g. /blog
-url: "https://sujaykundu.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: xplor4r
-github_username:  sujaykundu777
+url: "https://hongyu-he.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Hongyu75939626
+github_username:  Hongyu-He
 
 # Navigation 
 
@@ -28,26 +28,26 @@ urls:
 # Author Details
 
 author_logo: profile.jpg
-author: Sujay Kundu
-author_bio: Hi, My Name is Sujay Kundu. I love to Code and Design. devlopr-jekyll is a theme built for developers.  
-author_email: "sujaykundu777@gmail.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
+author: Hongyu He
+author_bio: Hi, My Name is Hongyu He. I am a senior student majoring in Electrical Engineering.  
+author_email: "nostalgia1229@gmail.com"
+author_location: China
+author_website_url: "https://hongyu-he.github.io"
 
 # social links
-twitter_username: xplor4r
-github_username:  sujaykundu777
-facebook_username: sujay.kundu2
-linkedin_username: sujaykundu
-behance_username: sujaykundu
-instagram_username: xplor4r
-medium_username: sujaykundu
-telegram_username: sujaykundu
-dribbble_username: sujaykundu777
-flickr_username: sujaykundu777
+twitter_username: Hongyu75939626
+github_username:  Hongyu-He
+facebook_username: 何洪宇
+linkedin_username: None
+behance_username: None
+instagram_username: None
+medium_username: Hongyu He
+telegram_username: None
+dribbble_username: None
+flickr_username: None
 
 # Choose what to show ( true - display or false - don't display)
-show_author_work_experiences: true
+show_author_work_experiences: false
 show_author_education_details: true
 show_author_project_details: true
 
@@ -66,30 +66,26 @@ author_work_experiences:
               visibility: true
 
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: XJTU.jpg
+                college_name: XJTU (Xi'an Jiaotong University)
+                college_url: http://men.xjtu.edu.cn/
+                college_degree: Electrical Engineer
+                description: Bachelor of Engineer
                 visibility: true
 
 author_project_details:
-              - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
+              - project_thumbnail: FL.png
+                project_title: Stochastic Channel-Based Federated Learning
+                project_description: A privacy preserving methods for large distributed federated learning system.
+                project_url: https://arxiv.org/abs/1910.11160
                 visibility: true
-              - project_thumbnail: programmingebooks.png
-                project_title: Programming Ebooks
-                project_description: A Platform to easily find and read programming books
-                project_url: https://programmingebooks.com
-                visibility: true
+
                 
 #for comments using disqus
-disqus_shortname: sujay-kundu  
+disqus_shortname: Hongyu-He 
 
 # wakatime username
-wakatime_username: sujaykundu777
+wakatime_username: Hongyu He
 
 # syntax highlighter
 markdown: kramdown

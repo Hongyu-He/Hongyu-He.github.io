@@ -5,8 +5,6 @@
 layout: home
 ---
 
-## Home 🏡
-
 Hi~ 😃 Welcome to my personal website! 🥳
 
 I'm Hongyu He ♂︎, a senior student majoring in Electrical Engineering 🧑‍💻. I'm interested in:

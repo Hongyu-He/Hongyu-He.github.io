@@ -5,7 +5,7 @@
 layout: home
 ---
 
-# Home 🏡
+## Home 🏡
 
 Hi~ 😃 Welcome to my personal website! 🥳
 

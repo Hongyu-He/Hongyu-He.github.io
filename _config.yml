@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hongyu He
+title: Hongyu He 🤓
 email: nostalgia1229@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hi~ I'm Hongyu He, a senior student majoring in Electrical Engineering (EE). Now I'm studying in Xi'an Jiaotong University.

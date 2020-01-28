@@ -5,11 +5,11 @@
 layout: home
 ---
 
-## Home
-
 Hi~ 😃 Welcome to my personal website! 🥳
 
 I'm Hongyu He ♂︎, a senior student majoring in Electrical Engineering 🧑‍💻. I'm interested in:
 
 - Artificial Intelligence
 - Machine Learning
+
+To know more about me, visit my [personal blog](https://hongyuhe.blogspot.com/).

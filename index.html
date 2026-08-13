@@ -1,644 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hongyu He - PhD Student & Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8fafc;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .profile-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
-
-        .profile-info h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile-info .subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .profile-info .affiliation {
-            font-size: 1.1rem;
-            font-weight: 500;
-            opacity: 0.8;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Main Content */
-        main {
-            padding: 60px 0;
-        }
-
-        .section {
-            margin-bottom: 80px;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .section h2 {
-            font-size: 2.2rem;
-            color: #667eea;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .section h2 i {
-            font-size: 1.8rem;
-        }
-
-        /* About Section */
-        .about-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .research-focus {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 25px 0;
-            text-align: center;
-        }
-
-        .research-focus h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .research-focus p {
-            font-size: 1.1rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .secondary-focus {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        /* Education & Experience */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #667eea;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -42px;
-            top: 25px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #667eea;
-            border: 3px solid white;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.3rem;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .timeline-item .institution {
-            font-size: 1.1rem;
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .timeline-item .period {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .timeline-item .description {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .timeline-item .gpa {
-            color: #888;
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: 10px;
-        }
-
-        /* Publications */
-        .publication {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
-        }
-
-        .publication h4 {
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-
-        .publication .authors {
-            color: #666;
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        .publication .venue {
-            color: #667eea;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .publication .doi {
-            color: #888;
-            font-size: 0.85rem;
-            margin-top: 5px;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .skill-item {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid #e2e8f0;
-        }
-
-        .skill-item i {
-            font-size: 2rem;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .skill-item h4 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .skill-item p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .contact-item {
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            border-color: #667eea;
-            transform: translateY(-5px);
-        }
-
-        .contact-item i {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .contact-item h4 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .contact-item p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .contact-item a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Awards */
-        .award-item {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #ff8a65;
-        }
-
-        .award-item h4 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .award-item .award-details {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #1e293b;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        footer p {
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-info h1 {
-                font-size: 2.2rem;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            nav a {
-                padding: 8px 12px;
-                font-size: 0.9rem;
-            }
-
-            .section {
-                padding: 30px 20px;
-            }
-
-            .section h2 {
-                font-size: 1.8rem;
-            }
-
-            .timeline {
-                padding-left: 20px;
-            }
-
-            .timeline-item::before {
-                left: -32px;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animation */
-        .section {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hongyu He</title>
+<meta name="description" content="Hongyu He — PhD candidate at the National University of Singapore working on generative AI: AI scientists, self-evolving systems, and model collapse under synthetic-data contamination.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314615c'/><text x='50' y='72' font-size='64' font-family='Georgia,serif' fill='%23fbfaf8' text-anchor='middle'>H</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hongyu He">
+<meta property="og:description" content="PhD candidate at NUS. AI scientists, self-evolving systems, and model collapse.">
+<meta property="og:image" content="https://hongyu-he.github.io/assets/profile_photo.JPG">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="profile-section">
-                <img src="profile_photo.JPG" alt="Hongyu He" class="profile-photo">
-                <div class="profile-info">
-                    <h1>Hongyu He</h1>
-                    <p class="subtitle">PhD Student & Research Assistant</p>
-                    <p class="affiliation">National University of Singapore</p>
-                </div>
-            </div>
-        </div>
-    </header>
+<a class="skip" href="#main">Skip to content</a>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Hongyu&nbsp;He</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
     </nav>
+  </div>
+</header>
 
-    <main class="container">
-        <section id="about" class="section">
-            <h2><i class="fas fa-user"></i> About Me</h2>
-            <div class="about-content">
-                <p>I am a PhD student in Biomedical Engineering at the National University of Singapore (NUS), where I began my doctoral studies in August 2024. My academic journey spans across multiple prestigious institutions and diverse engineering disciplines, providing me with a unique interdisciplinary perspective that bridges electrical engineering, biomedical engineering, and artificial intelligence.</p>
-                
-                <p>My research passion lies at the intersection of artificial intelligence and biomedical sciences, where I am developing innovative computational approaches to accelerate scientific discovery. I believe that AI has the potential to revolutionize how we understand biological systems and develop new therapeutic solutions.</p>
-                
-                <p>Before starting my PhD, I gained valuable research experience at Duke University, where I worked as a Research Associate focusing on medical imaging and machine learning applications. My diverse background includes work on privacy-preserving federated learning, deepfake detection, and advanced medical image analysis.</p>
-                
-                <div class="research-focus">
-                    <h3>Research Focus</h3>
-                    <ul style="text-align: left; margin: 0; padding-left: 20px;">
-                        <li style="margin-bottom: 15px;">Use self-evolving AI with improved creativity to help make new discoveries in biomedical sciences</li>
-                        <li>Improve creativity of generative machine learning models and enable them to propose novel contents, focusing on post-training of LLMs and fundamental mechanisms of diffusion</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<main id="main">
 
-        <section id="education" class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>PhD in Biomedical Engineering</h3>
-                    <div class="institution">National University of Singapore (NUS)</div>
-                    <div class="period">August 2024 - Present</div>
-                    <div class="description">Research interests: AI for biomedical science, Generative model collapse, Increase LLM creativity</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>Master of Science in Electrical & Computer Engineering</h3>
-                    <div class="institution">Duke University, Durham, North Carolina</div>
-                    <div class="period">August 2020 - May 2022</div>
-                    <div class="description">Research interests: Machine Learning and Data Analytics</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>Bachelor of Engineering in Electrical Engineering</h3>
-                    <div class="institution">Xi'an Jiaotong University, Xi'an, Shaanxi, China</div>
-                    <div class="period">August 2016 - June 2020</div>
-                    <div class="description">Tsien Hsue-shen Class for Top Students</div>
-                </div>
-            </div>
-        </section>
+  <div class="wrap">
+    <section class="hero">
+      <img class="hero-photo" src="assets/profile_photo.JPG" width="168" height="168"
+           alt="Portrait of Hongyu He">
+      <div>
+        <h1 class="hero-name">Hongyu He</h1>
+        <p class="hero-role">
+          PhD candidate, <strong>National University of Singapore</strong>
+        </p>
+        <p class="hero-tagline">
+          AI scientists &middot; self-evolving systems &middot; model collapse
+        </p>
+        <ul class="hero-links">
+          <li>
+            <a href="mailto:hongyu.h@nus.edu.sg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6 9-6"/>
+              </svg>Email</a>
+          </li>
+          <li>
+            <a href="https://github.com/Hongyu-He" rel="me">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+              </svg>GitHub</a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=anDp3o0AAAAJ&amp;hl=en" rel="me">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 4 2 9l10 5 10-5-10-5Z"/>
+                <path d="M6 11.5V16c0 1.2 2.7 2.4 6 2.4s6-1.2 6-2.4v-4.5"/>
+              </svg>Scholar</a>
+          </li>
+          <li>
+            <a href="cv.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/>
+              </svg>CV</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="experience" class="section">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Associate in Research</h3>
-                    <div class="institution">Yong Loo Lin School of Medicine, National University of Singapore</div>
-                    <div class="period">February 2024 - Present</div>
-                    <div class="description">
-                        Conducting advanced research at the intersection of AI and biomedical sciences, focusing on automated discovery systems and generative AI applications in healthcare.
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>Associate in Research</h3>
-                    <div class="institution">Department of Radiology, Duke University Medical Center</div>
-                    <div class="period">July 2022 - October 2023</div>
-                    <div class="description">
-                        <strong>Human Bone Project:</strong> Implemented a multi-label classification model that predicts both bone type and MRI series type (ax/sag/cor); Annotated MRI bone images for the training of bone segmentation model; Implemented 3D bone segmentation model.
-                        <br><br>
-                        <strong>Body Composition Project:</strong> Predict disease risk using CT-based body composition analysis.
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="section">
+      <div class="prose">
+        <p>I am a PhD candidate at the National University of Singapore, where I started in
+        August&nbsp;2024, and an Associate in Research at the Yong Loo Lin School of
+        Medicine. I work on generative AI — on systems that can discover things, and on the
+        conditions under which they quietly stop being able to.</p>
 
-        <section id="publications" class="section">
-            <h2><i class="fas fa-file-alt"></i> Publications</h2>
-            
-            <div class="publication">
-                <h4>Automated Discovery of Age-Related Retinal Biomarkers Using Deep Learning Framework</h4>
-                <div class="authors">Hongyu He, Dianbo Liu</div>
-                <div class="venue">ARVO 2025 (Poster Session)</div>
-            </div>
-            
-            <div class="publication">
-                <h4>SuperMask: Generating High-resolution object masks from multi-view, unaligned low-resolution MRIs</h4>
-                <div class="authors">Hongyu He, Hanxue Gu, Roy Colglazier, Jordan Axelrod, Robert French, Maciej A Mazurowski</div>
-                <div class="venue">MIDL 2023</div>
-            </div>
-            
-            <div class="publication">
-                <h4>Faceguard: Proactive deepfake detection</h4>
-                <div class="authors">Yuankun Yang, Chenyue Liang, Hongyu He, Xiaoyu Cao, and Neil Zhenqiang Gong</div>
-                <div class="venue">2021 (preprint available on arXiv)</div>
-            </div>
-            
-            <div class="publication">
-                <h4>Stochastic Channel-Based Federated Learning With Neural Network Pruning for Medical Data Privacy Preservation: Model Development and Experimental Validation</h4>
-                <div class="authors">Rulin Shao, Hongyu He, Ziwei Chen, Hui Liu, Dianbo Liu</div>
-                <div class="venue">JMIR Form Res 2020;4(12):e17265</div>
-                <div class="doi">DOI: 10.2196/17265</div>
-            </div>
-            
-            <div class="publication">
-                <h4>Stochastic Channel-Based Federated Learning for Medical Data Privacy Preserving</h4>
-                <div class="authors">Rulin Shao, Hongyu He, Hui Liu, Dianbo Liu</div>
-                <div class="venue">Machine Learning for Health at NeurIPS, 2019</div>
-            </div>
-            
-            <div class="publication">
-                <h4>OpenHI2 – Open source histopathological image platform</h4>
-                <div class="authors">Pargorn Puttapirat, Haichuan Zhang, Jingyi Deng, Yuxin Dong, Jiangbo Shi, Hongyu He, Zeyu Gao, Chunbao Wang, Xiangrong Zhang, Chen Li</div>
-                <div class="venue">2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</div>
-            </div>
-        </section>
+        <p>Two questions take up most of my time. The first is the <em>AI scientist</em>:
+        agents that propose and test hypotheses themselves, and whether what comes out is a
+        real finding or a fluent restatement of the training data. The second is
+        <em>model collapse</em>: what happens to a model's diversity once it begins training
+        on machine-generated data. They turn out to be the same question approached from
+        opposite ends.</p>
 
-        <section id="contact" class="section">
-            <h2><i class="fas fa-envelope"></i> Contact Information</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h4>Email</h4>
-                    <p><a href="mailto:hongyu.h@nus.edu.sg">hongyu.h@nus.edu.sg</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <h4>Phone</h4>
-                    <p><a href="tel:+6598816465">(+65) 98816465</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
+        <p>Medicine is where I test this, because it is where a lost rare case is not an
+        abstract metric. My recent work finds that as AI-generated content accumulates in
+        medical records, rare but critical findings vanish from what models produce and
+        phenotypes converge on the generic.</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Hongyu He. All rights reserved.</p>
-        </div>
-    </footer>
+        <p>Before Singapore I was at Duke University, first for a master's in Electrical
+        &amp; Computer Engineering and then as an Associate in Research in the Department of
+        Radiology, working on bone MRI segmentation and CT-based body composition. Earlier
+        projects covered privacy-preserving federated learning and proactive deepfake
+        detection.</p>
+      </div>
+    </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <section class="section">
+      <p class="eyebrow">Current focus</p>
+      <ol class="threads">
+        <li>
+          <div>
+            <h3>AI scientists</h3>
+            <p>Systems that generate and test hypotheses on their own, rather than executing
+            a plan a human wrote out in advance. The part I care about is whether the output
+            is a genuine finding or a restatement of something already in the training
+            data.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Self-evolving AI systems</h3>
+            <p>Agents that rewrite their own scaffolding — prompts, tools, the criteria they
+            are judged by — and improve across iterations. The open question is what keeps
+            such a loop improving instead of drifting.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Model collapse and synthetic-data contamination</h3>
+            <p>What happens to a generative model's diversity once it trains on
+            machine-generated output. This is the failure mode underneath the creativity
+            question: as models recycle their own output, the rare cases go first and
+            everything converges on the generic.</p>
+          </div>
+        </li>
+      </ol>
+      <p style="margin-top:1.75rem"><a href="research.html">More on the research &rarr;</a></p>
+    </section>
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.backdropFilter = 'blur(10px)';
-            } else {
-                nav.style.background = 'white';
-                nav.style.backdropFilter = 'none';
-            }
-        });
+    <section class="section">
+      <p class="eyebrow">Selected publications</p>
+      <ul class="pubs">
+        <li class="pub">
+          <h3 class="pub-title">AI-generated Data Contamination Erodes Pathological
+            Variability and Diagnostic Reliability</h3>
+          <p class="pub-authors"><span class="me">Hongyu He</span>, Shaowen Xiang, Ye Zhang,
+            Yingtao Zhu, Jin Zhang, Yunyi Lu, Hao Deng, Emily Alsentzer, Yun Liu,
+            Qingyu Chen, Kun-Hsing Yu, Andrew Marshall, Tingting Chen, Srinivas Anumasa,
+            Daniel Ebner, Dean Ho, Kee Yuan Ngiam, Ching-Yu Cheng, Dianbo Liu</p>
+          <p class="pub-venue">Preprint, medRxiv / arXiv:2601.12946, 2026</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2601.12946">PDF</a>
+            <a href="https://arxiv.org/abs/2601.12946">arXiv</a>
+          </p>
+        </li>
+        <li class="pub">
+          <h3 class="pub-title">Safety Challenges of AI in Medicine in the Era of Large
+            Language Models</h3>
+          <p class="pub-authors">Xiaoye Wang, Nicole Xi Zhang,
+            <span class="me">Hongyu He</span>, Trang Nguyen, Kun-Hsing Yu, Hao Deng,
+            Cynthia Brandt, Danielle S. Bitterman, Ling Pan, Ching-Yu Cheng, James Zou,
+            Dianbo Liu</p>
+          <p class="pub-venue">Preprint, arXiv:2409.18968, 2024</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2409.18968">PDF</a>
+            <a href="https://arxiv.org/abs/2409.18968">arXiv</a>
+          </p>
+        </li>
+        <li class="pub">
+          <h3 class="pub-title">SuperMask: Generating High-resolution Object Masks from
+            Multi-view, Unaligned Low-resolution MRIs</h3>
+          <p class="pub-authors">Hanxue Gu, <span class="me">Hongyu He</span>, Roy Colglazier,
+            Jordan Axelrod, Robert French, Maciej A. Mazurowski</p>
+          <p class="pub-venue">MIDL 2023</p>
+          <p class="pub-links">
+            <a href="https://proceedings.mlr.press/v227/gu24b/gu24b.pdf">PDF</a>
+            <a href="https://arxiv.org/abs/2303.07517">arXiv</a>
+            <a href="https://github.com/mazurowski-lab/Supermask">Code</a>
+          </p>
+        </li>
+      </ul>
+      <p style="margin-top:1.75rem"><a href="publications.html">All publications &rarr;</a></p>
+    </section>
 
-        // Add active navigation highlighting
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
+    <section class="section">
+      <p class="eyebrow">Contact</p>
+      <ul class="contact-list">
+        <li><span class="contact-key">Email</span>
+            <span><a href="mailto:hongyu.h@nus.edu.sg">hongyu.h@nus.edu.sg</a></span></li>
+        <li><span class="contact-key">Scholar</span>
+            <span><a href="https://scholar.google.com/citations?user=anDp3o0AAAAJ&amp;hl=en">Google Scholar profile</a></span></li>
+        <li><span class="contact-key">Where</span>
+            <span>Yong Loo Lin School of Medicine, NUS, Singapore</span></li>
+      </ul>
+    </section>
+  </div>
 
-            navLinks.forEach(link => {
-                link.style.background = '';
-                link.style.color = '';
-                if (link.getAttribute('href') === '#' + current) {
-                    link.style.background = '#667eea';
-                    link.style.color = 'white';
-                }
-            });
-        });
-    </script>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>&copy; 2026 Hongyu He</p>
+    <div class="foot-links">
+      <a href="mailto:hongyu.h@nus.edu.sg">hongyu.h@nus.edu.sg</a>
+      <a href="https://scholar.google.com/citations?user=anDp3o0AAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://github.com/Hongyu-He">GitHub</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

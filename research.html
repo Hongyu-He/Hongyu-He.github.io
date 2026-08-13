@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Hongyu He</title>
+<meta name="description" content="Research directions of Hongyu He: AI scientists and autonomous discovery, self-evolving AI systems, and model collapse under synthetic-data contamination — tested in clinical and biomedical settings.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2314615c'/><text x='50' y='72' font-size='64' font-family='Georgia,serif' fill='%23fbfaf8' text-anchor='middle'>H</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Research — Hongyu He">
+<meta property="og:description" content="AI scientists, self-evolving systems, and model collapse.">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Hongyu&nbsp;He</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="page-head">
+      <h1 class="page-title">Research</h1>
+      <p class="page-standfirst">I work on generative AI systems that are supposed to
+      produce something new — and on the mechanisms by which they stop doing so. The three
+      directions below are one question seen from three sides.</p>
+    </div>
+
+    <section class="section">
+      <p class="eyebrow">Current directions</p>
+      <ol class="threads">
+        <li>
+          <div>
+            <h3>AI scientists</h3>
+            <p>Systems that generate and test hypotheses on their own, rather than executing
+            a plan a human wrote out in advance. Search over ideas, self-directed
+            experimentation, and the evaluation problem underneath both: deciding whether an
+            agent's output is a genuine finding or a fluent restatement of its training
+            data. My own attempts at this have been in biomarker discovery — searching for
+            candidate markers in retinal imaging rather than validating a pre-specified
+            list.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Self-evolving AI systems</h3>
+            <p>Agents that rewrite their own scaffolding — prompts, tools, the criteria they
+            are judged by — and improve across iterations. The interesting failure is not
+            that such a loop stalls but that it can appear to improve while drifting: when
+            the evaluator co-evolves with the agent, the reward can move faster than the
+            capability. What keeps a self-improvement loop anchored is, to me, the open
+            question.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Model collapse and synthetic-data contamination</h3>
+            <p>What happens to a generative model's diversity once it trains on
+            machine-generated output. This is the failure mode underneath the creativity
+            question, and it is not gradual in the way one might hope: the rare cases go
+            first. Across more than 800,000 synthetic data points spanning clinical text,
+            vision–language reporting and medical image synthesis, we found models
+            converging on generic phenotypes irrespective of architecture, with rare but
+            critical findings disappearing from the output entirely.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <div class="prose">
+        <p class="eyebrow">Why medicine</p>
+        <p>Clinical settings are where I test these questions, not the subject of them. Two
+        reasons. A lost rare case is not an abstract diversity metric there — it is a missed
+        pneumothorax. And medical records are already being populated with AI-generated
+        content, which makes the contamination loop something to measure now rather than
+        forecast.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Other threads</p>
+      <div class="entries">
+
+        <div class="entry">
+          <div class="entry-period">2024 – present</div>
+          <div class="entry-body">
+            <h3 class="entry-title">Safety and evaluation of clinical LLMs</h3>
+            <p class="entry-note">A survey of the safety challenges specific to large
+            language models in medicine, and cross-lingual work showing that diagnostic
+            safety is language-dependent — performance and failure modes shift with the
+            language a system is queried in, which matters for anywhere that is not
+            monolingual English.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-period">2022 – 2023</div>
+          <div class="entry-body">
+            <h3 class="entry-title">Medical imaging</h3>
+            <p class="entry-note">At the Department of Radiology, Duke University Medical
+            Center. Multi-label classification of bone type and MRI series type
+            (axial / sagittal / coronal), annotation and 3D segmentation of bone MRI, and
+            CT-based body composition analysis for disease-risk prediction. The
+            <a href="publications.html">SuperMask</a> work came out of this period:
+            reconstructing high-resolution object masks from multi-view, unaligned
+            low-resolution MRIs.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-period">2019 – 2021</div>
+          <div class="entry-body">
+            <h3 class="entry-title">Privacy-preserving and trustworthy ML</h3>
+            <p class="entry-note">Stochastic channel-based federated learning with neural
+            network pruning, aimed at training on medical data without centralising it; and
+            FaceGuard, a proactive approach to deepfake detection.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-period">2019</div>
+          <div class="entry-body">
+            <h3 class="entry-title">Research infrastructure</h3>
+            <p class="entry-note">OpenHI2, an open-source platform for histopathological
+            image annotation and analysis.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="prose">
+        <p>If any of this overlaps with what you are working on, I am glad to hear from
+        you — <a href="mailto:hongyu.h@nus.edu.sg">hongyu.h@nus.edu.sg</a>.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>&copy; 2026 Hongyu He</p>
+    <div class="foot-links">
+      <a href="mailto:hongyu.h@nus.edu.sg">hongyu.h@nus.edu.sg</a>
+      <a href="https://scholar.google.com/citations?user=anDp3o0AAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://github.com/Hongyu-He">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
